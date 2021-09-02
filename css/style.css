@@ -158,7 +158,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	width: 665px;
 }
 
 .skills__item + .skills__item {
@@ -169,6 +168,7 @@ body {
 	font-weight: 600;
 	text-transform: uppercase;
 	display: block;
+	margin-right: 15px;
 }
 
 .skills__item-bar {
@@ -197,6 +197,7 @@ body {
 	flex-wrap: wrap;
 	align-items: baseline;
 	justify-content: space-between;
+	max-width: 665px;
 }
 
 .services__item {
