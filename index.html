@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="html" lang="ru">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -9,43 +9,44 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="body">
+<body>
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
-				<div class="header__top">
+				<nav class="header__top">
 					<a class="logo" href="#!">
-						<img class="logo__img" src="images/logo.svg" alt="logo" width="159" height="52">
+						<img class="logo__img" src="images/logo.svg" alt="логотип" width="159" height="52">
 					</a>
-					<nav class="menu">
-						<ul class="menu__list">
-							<li class="menu__item">
-								<a class="menu__link" href="#!">Обо мне</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#!">Навыки</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#!">Услуги</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#!">Портфолио</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#!">Отзывы</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__link" href="#!">Контакты</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Обо мне</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Навыки</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Услуги</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Портфолио</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Отзывы</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#!">Контакты</a>
+						</li>
+					</ul>
+				</nav>
 				<div class="header__content">
-					<p class="header__content-suptitle">Привет, я Иван Иванов</p>
-					<h1 class="header__title">frontend-разработчик </h1>
+					<h1 class="header__title">
+						Привет, я Иван Иванов
+						<span class="header__subtitle">frontend-разработчик</span>
+					</h1>
 				</div>
 				<a class="header__link" href="#!">Смотреть работы</a>
 			</div>
@@ -71,20 +72,26 @@
 			<div class="container">
 				<h2 class="skills__title title">Навыки</h2>
 				<div class="skills__inner">
-					<img class="skills__img" src="images/skills-img.jpg" alt="portrain-picture" width="415"
+					<img class="skills__img" src="images/skills-img.jpg" alt="фото разработчика" width="415"
 						height="450">
 					<ul class="skills__list">
 						<li class="skills__item">
 							<span class="skills__item-stats">html</span>
-							<div class="skills__item-bar skills__item-bar--html"></div>
+							<div class="skills__item-bar">
+								<span class="skills__item-blue"></span>
+							</div>
 						</li>
 						<li class="skills__item">
 							<span class="skills__item-stats">css</span>
-							<div class="skills__item-bar skills__item-bar--css"></div>
+							<div class="skills__item-bar">
+								<span class="skills__item-blue"></span>
+							</div>
 						</li>
 						<li class="skills__item">
 							<span class="skills__item-stats">js</span>
-							<div class="skills__item-bar skills__item-bar--js"></div>
+							<div class="skills__item-bar">
+								<span class="skills__item-blue"></span>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -95,16 +102,16 @@
 				<h2 class="services__title title">Услуги</h2>
 				<ul class="services__list">
 					<li class="services__item services__item--teg">
-						<h4 class="services__item-title">Вёрстка проектов</h4>
+						<h3 class="services__item-title">Вёрстка проектов</h3>
 						<p class="services__item-text">Сделаю качественную вёрстку вашего проекта по предоставленному
 							макету или примеру</p>
 					</li>
 					<li class="services__item services__item--cms">
-						<h4 class="services__item-title">Посадка на CMS</h4>
+						<h3 class="services__item-title">Посадка на CMS</h3>
 						<p class="services__item-text">Интегрирую ваш проект в одну из популярных CMS</p>
 					</li>
 					<li class="services__item services__item--support">
-						<h4 class="services__item-title">Поддержка сайта</h4>
+						<h3 class="services__item-title">Поддержка сайта</h3>
 						<p class="services__item-text">Гарантирую поддержку вашего сайта на протяжениии 30 дней после
 							сдачи проекта</p>
 					</li>

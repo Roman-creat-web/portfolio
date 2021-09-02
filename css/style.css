@@ -1,27 +1,9 @@
-ul[class], ol[class] {
-	padding: 0;
+html {
+	box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
-	margin: 0;
-}
-
-ul[class] {
-	list-style: none;
-}
-
-img {
-	max-width: 100%;
-	display: block;
-}
-
-input, button, textarea, select {
-	font: inherit;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
+*, *::after, *::before {
+	box-sizing: inherit;
 }
 
 :root {
@@ -31,20 +13,13 @@ a {
 	--stats-decor: #DBDBED;
 }
 
-html {
-	box-sizing: border-box;
-}
-
-*, *::after, *::before {
-	box-sizing: inherit;
-}
-
-.body {
+body {
 	font-family: 'Open Sans', "Arial", sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 28px;
 	color: var(--main-color);
+	background-color: #fff;
 }
 
 .container {
@@ -58,7 +33,6 @@ html {
 }
 
 .title {
-	font-weight: 700;
 	font-size: 48px;
 	line-height: 64px;
 	display: inline-block;
@@ -68,7 +42,7 @@ html {
 .title::after {
 	content: '';
 	position: absolute;
-	background: rgba(35, 82, 222, 0.1);
+	background-color: rgba(35, 82, 222, 0.1);
 	width: 100%;
 	height: 15px;
 	bottom: 7px;
@@ -76,16 +50,14 @@ html {
 }
 
 .header {
-	color: #fff;
 	padding: 75px 0 30px;
+	color: #fff;
 	background: url(../images/header-bg.jpg) no-repeat center center;
 	background-size: cover;
-	min-height: 100vh;
-	text-align: center;
 }
 
 .header__inner {
-	min-height: calc(100vh - 127px);
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -99,55 +71,30 @@ html {
 	justify-content: space-between;
 }
 
-.header__link {
-	color: inherit;
-}
-
-.header__title {
-	font-size: 90px;
-	line-height: 117px;
-	max-width: 1000px;
-}
-
 .header__content {
 	text-align: left;
 }
 
-.header__content-suptitle {
+.header__title {
+	font-weight: 400;
 	font-size: 48px;
-	line-height: 64px;
-	margin-bottom: 20px;
+	line-height: 62px;
+	max-width: 700px;
+	max-width: 1040px;
 }
 
-.menu__link {
-	color: inherit;
-}
-
-.menu__link:hover {
-	border-bottom: 1px solid #fff;
-}
-
-.menu__link:active {
-	opacity: .7;
-	border-bottom: none;
-}
-
-.menu__list {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 24px;
-}
-
-.menu__item+.menu__item {
-	margin-left: 35px;
+.header__subtitle {
+	font-weight: 700;
+	font-size: 90px;
+	line-height: 117px;
+	display: block;
 }
 
 .header__link {
-	color: inherit;
-	width: 157px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+	width: 160px;
 	margin: 0 auto;
 	padding-bottom: 33px;
 	background: url(../images/arrow.svg) no-repeat bottom center;
@@ -158,34 +105,42 @@ html {
 }
 
 .header__link:active {
-	opacity: .7;
+	opacity: 0.7;
 	text-decoration: none;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.menu__item + .menu__item {
+	margin-left: 35px;
+}
+
+.menu__link:hover {
+	border-bottom: 1px solid #fff;
+}
+
+.menu__link:active {
+	opacity: 0.7;
+	border-bottom: none;
 }
 
 .about__title {
 	margin-bottom: 60px;
 }
 
-.about__content-text+.about__content-text {
+.about__content-text + .about__content-text {
 	margin-top: 30px;
 }
 
 .skills {
-	background: var(--section-bg);
-}
-
-.skills__img {
-	margin-right: 90px;
-}
-
-.skills__list {
-	margin-left: 90px;
-}
-
-.skills__item-stats {
-	font-weight: 600;
-	text-transform: uppercase;
-	display: block;
+	background-color: var(--section-bg);
 }
 
 .skills__inner {
@@ -194,8 +149,16 @@ html {
 	align-items: center;
 }
 
-.skills__item+.skills__item {
-	margin-top: 85px;
+.skills__title {
+	margin-bottom: 60px;
+}
+
+.skills__list {
+	margin-left: 90px;
+}
+
+.skills__img {
+	margin-right: 90px;
 }
 
 .skills__item {
@@ -205,39 +168,22 @@ html {
 	width: 665px;
 }
 
-.skills__title {
-	margin-bottom: 60px;
+.skills__item + .skills__item {
+	margin-top: 85px;
+}
+
+.skills__item-stats {
+	font-weight: 600;
+	text-transform: uppercase;
+	display: block;
 }
 
 .skills__item-bar {
 	width: 600px;
 	height: 32px;
-	background: var(--stats-color);
+	background-color: var(--stats-color);
 	position: relative;
 	margin-left: auto;
-}
-
-.skills__item-bar:after {
-	content: '';
-	position: absolute;
-	height: 32px;
-	content: '';
-	position: absolute;
-	background: var(--stats-decor);
-	right: 0;
-	top: 0;
-}
-
-.skills__item-bar--html::after {
-	width: 90px;
-}
-
-.skills__item-bar--css::after {
-	width: 120px;
-}
-
-.skills__item-bar--js::after {
-	width: 230px;
 }
 
 .services__title {
