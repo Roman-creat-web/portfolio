@@ -9,7 +9,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -47,11 +46,12 @@
 						Привет, я Иван Иванов
 						<span class="header__subtitle">frontend-разработчик</span>
 					</h1>
+					<a class="header__link" href="#myworks">Смотреть работы</a>
 				</div>
-				<a class="header__link" href="#!">Смотреть работы</a>
 			</div>
 		</div>
 	</header>
+
 	<main class="main">
 		<section class="about section">
 			<div class="container">
@@ -68,6 +68,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="skills section">
 			<div class="container">
 				<h2 class="skills__title title">Навыки</h2>
@@ -97,6 +98,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="services section">
 			<div class="container">
 				<h2 class="services__title title">Услуги</h2>
@@ -118,7 +120,41 @@
 				</ul>
 			</div>
 		</section>
+
+		<section class="projects section" id="myworks">
+			<h2 class="projects__title title">Мои работы</h2>
+			<div class="projects__filter">
+				<button class="projects__fiter-button" data-filter="all">Все работы </button>
+				<button class="projects__fiter-button" data-filter=".category-a">Лендинги</button>
+				<button class="projects__fiter-button" data-filter=".category-b">Корпоративные</button>
+				<button class="projects__fiter-button" data-filter=".category-c">E-commerce</button>
+			</div>
+			<ul class="projects__list">
+				<li class="projects__item mix category-a">
+					<img class="projects__item-img" src="images/projects/1.jpg" alt="проект1" width="360" height="360">
+				</li>
+				<li class="projects__item mix category-a">
+					<img class="projects__item-img" src="images/projects/2.jpg" alt="проект2" width="360" height="360">
+				</li>
+				<li class="projects__item mix category-b">
+					<img class="projects__item-img" src="images/projects/3.jpg" alt="проект3" width="360" height="360">
+				</li>
+				<li class="projects__item mix category-b">
+					<img class="projects__item-img" src="images/projects/4.jpg" alt="проект4" width="360" height="360">
+				</li>
+				<li class="projects__item mix category-c">
+					<img class="projects__item-img" src="images/projects/5.jpg" alt="проект5" width="360" height="360">
+				</li>
+				<li class="projects__item mix category-c">
+					<img class="projects__item-img" src="images/projects/6.jpg" alt="проект6" width="360" height="360">
+				</li>
+			</ul>
+			<a class="projects__link" href="#!">Загрузить ещё</a>
+		</section>
 	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
