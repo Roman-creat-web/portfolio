@@ -2,15 +2,33 @@ html {
 	box-sizing: border-box;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
 	box-sizing: inherit;
 }
 
-ul, ol {
+ul,
+ol {
 	padding: 0;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
 	margin: 0;
 }
 
@@ -23,7 +41,10 @@ img {
 	display: block;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
 	font: inherit;
 }
 
@@ -49,6 +70,7 @@ button {
 	--link-in-focus: rgba(35, 82, 222, 0.5);
 	--link-shadow: rgba(0, 0, 0, 0.25);
 	--focus-outline: rgba(255, 255, 255, 0.5);
+	--bg-focus: rgba(255, 255, 255, 0.0001);
 }
 
 body {
@@ -75,6 +97,7 @@ body {
 	line-height: 1.3;
 	display: inline-block;
 	position: relative;
+	margin-bottom: 60px;
 }
 
 .title::after {
@@ -89,7 +112,7 @@ body {
 
 .header {
 	color: var(--white);
-	background-image: url(../images/header-bg-decor.png), url(../images/header-bg.jpg);
+	background-image: url("../images/header-bg-decor.png"), url("../images/header-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -124,39 +147,39 @@ body {
 .header__link {
 	line-height: 1.3;
 	font-weight: 600;
-	text-align: center;
+	align-self: center;
 	margin-bottom: 30px;
 	padding-bottom: 33px;
 	background: url("../images/arrow.svg") no-repeat bottom center;
 }
 
-.header__link:hover, .menu__link:hover {
+.header__link:hover,
+.menu__link:hover {
 	text-decoration: underline;
 }
 
-.header__link:active, .menu__link:active {
+.header__link:active,
+.menu__link:active {
 	text-decoration: none;
 	opacity: 0.7;
 }
 
-.header__link:focus, .menu__link:focus {
+.header__link:focus,
+.menu__link:focus {
 	outline: none;
-	background-color: rgba(255, 255, 255, 0.0001);
-	box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
+	background-color: var(--bg-focus);
+	box-shadow: 0px 0px 0px 2px var(--focus-outline);
 	border-radius: 3px;
 }
 
 .menu {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
 	font-weight: 600;
-	font-size: 18px;
 	line-height: 1.3;
 }
 
-.menu__item+.menu__item {
-	margin-left: 35px;
+.menu__item:not(:last-child) {
+	margin-right: 35px;
 }
 
 .about__title {
@@ -177,17 +200,14 @@ body {
 	justify-content: space-between;
 }
 
-.skills__title {
-	margin-bottom: 60px;
-}
-
 .skills__item {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
-.skills__item+.skills__item {
-	margin-top: 85px;
+.skills__item:not(:last-child) {
+	margin-bottom: 85px;
 }
 
 .skills__stats {
@@ -200,33 +220,19 @@ body {
 .skills__bar {
 	width: 600px;
 	height: 32px;
-	background-color: var(--stats-color);
-	position: relative;
-	margin-left: auto;
-}
-
-.skills__blue {
-	position: absolute;
-	display: block;
-	background-color: var(--stats-color);
-	left: 0;
-	top: 0;
-	height: 100%;
-}
-
-.skills__bar {
 	background: var(--stats-decor);
 }
 
-.services__title {
-	margin-bottom: 60px;
+.skills__blue {
+	display: block;
+	background-color: var(--stats-color);
+	height: 100%;
 }
 
 .services__list {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 90px;
 }
 
 .services__item {
@@ -240,7 +246,7 @@ body {
 	font-size: 28px;
 }
 
-.services__item-text {
+.services__text {
 	font-size: 16px;
 }
 
@@ -257,19 +263,11 @@ body {
 }
 
 .projects {
-	padding-top: 0;
+	padding-bottom: 140px;
 	text-align: center;
 }
 
 .projects__filter {
-	margin-bottom: 60px;
-}
-
-.projects__item {
-	cursor: pointer;
-}
-
-.projects__title {
 	margin-bottom: 60px;
 }
 
@@ -294,8 +292,8 @@ body {
 
 .projects__button:focus {
 	outline: none;
-	background: rgba(255, 255, 255, 0.0001);
-	box-shadow: 0px 0px 0px 2px rgba(35, 82, 222, 0.5);
+	background: var(--bg-focus);
+	box-shadow: 0px 0px 0px 2px var(--link-in-focus);
 	border-radius: 3px;
 }
 
@@ -308,8 +306,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 45px;
-	max-width: 1170px;
-	margin: 0 auto 65px;
+	margin-bottom: 65px;
 }
 
 .mixitup-control-active {
@@ -322,7 +319,7 @@ body {
 	padding: 12px 24px;
 	border: 1px solid transparent;
 	background-color: var(--stats-color);
-	transition:  color 0.2s linear, background-color 0.2s ease-out, border-color 0.3s linear;
+	transition: color 0.2s linear, background-color 0.2s ease-out, border-color 0.3s linear;
 }
 
 .projects__btn:focus {
