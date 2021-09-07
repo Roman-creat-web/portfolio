@@ -174,7 +174,7 @@
 								height="360">
 						</li>
 					</ul>
-					<button class="projects__btn button" href="#!">Загрузить ещё</button>
+					<button class="projects__btn button">Загрузить ещё</button>
 				</div>
 			</section>
 			<section class="reviews section">
@@ -239,19 +239,19 @@
 								<li class="contacts__item">
 									<a class="contacts__link" href="#!">
 										<img class="contacts__img" src="images/socials/instagram.svg"
-											alt="instagram-icon" width="44" height="46">
+											alt="иконка instagram" width="44" height="46">
 									</a>
 								</li>
 								<li class="contacts__item">
 									<a class="contacts__link" href="#!">
-										<img class="contacts__img" src="images/socials/facebook.svg" alt="facebook-icon"
-											width="44" height="46">
+										<img class="contacts__img" src="images/socials/facebook.svg"
+											alt="иконка facebook" width="44" height="46">
 									</a>
 								</li>
 								<li class="contacts__item">
 									<a class="contacts__link" href="#!">
-										<img class="contacts__img" src="images/socials/telegram.svg" alt="telegram-icon"
-											width="44" height="46">
+										<img class="contacts__img" src="images/socials/telegram.svg"
+											alt="иконка telegram" width="44" height="46">
 									</a>
 								</li>
 							</ul>
@@ -261,18 +261,17 @@
 								<div class="contacts__box">
 									<label class="contacts__label" for="user-name">Ваше имя</label>
 									<input class="contacts__input" type="text" name="user-name" id="user-name"
-										placeholder="Иван">
+										placeholder="Иван" required>
 								</div>
 								<div class="contacts__box">
 									<label class="contacts__label" for="user-phone">Номер телефона</label>
 									<input class="contacts__input" type="text" name="user-phone" id="user-phone"
-										placeholder="+380501111111">
+										placeholder="+380501111111" required>
 								</div>
 								<div class="contacts__box contacts__box--textarea">
 									<label class="contacts__label" for="textarea-field">Ваше сообщение</label>
-									<textarea class="contacts__input contacts__input--textarea"
-										name="textarea-field id=" textarea-field"
-										placeholder="Текст вашего сообщения"></textarea>
+									<textarea class="contacts__input contacts__input--textarea" name="textarea-field"
+										id="textarea-field" placeholder="Текст вашего сообщения" required></textarea>
 								</div>
 							</div>
 							<button class="contacts__submit button" type="submit">Отправить</button>
