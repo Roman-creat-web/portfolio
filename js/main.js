@@ -1,3 +1,5 @@
-$(function() {
-	var mixer = mixitup('.projects__list');
-});
+// $(function () {
+// 	$('.menu__button').on('click', function () {
+// 		$('.menu').toggleClass('menu--active');
+// 	});
+// });
