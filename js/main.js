@@ -1,6 +1,6 @@
 $(function () {
-	$('.menu__button').on('click', function () {
-		$('.menu, .menu__button').toggleClass('active');
+	$('.header__button').on('click', function () {
+		$('.menu, .header__button').toggleClass('active');
 	});
 });
 

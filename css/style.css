@@ -2,15 +2,33 @@ html {
 	box-sizing: border-box;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
 	box-sizing: inherit;
 }
 
-ul, ol {
+ul,
+ol {
 	padding: 0;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
 	margin: 0;
 }
 
@@ -23,7 +41,10 @@ img {
 	display: block;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
 	font: inherit;
 }
 
@@ -196,23 +217,26 @@ body {
 	background: url("../images/arrow.svg") no-repeat bottom center;
 }
 
-.header__link:hover, .menu__link:hover {
+.header__link:hover,
+.menu__link:hover {
 	text-decoration: underline;
 }
 
-.header__link:active, .menu__link:active {
+.header__link:active,
+.menu__link:active {
 	text-decoration: none;
 	opacity: 0.7;
 }
 
-.header__link:focus, .menu__link:focus {
+.header__link:focus,
+.menu__link:focus {
 	outline: 1px solid transparent;
 	background-color: var(--bg-focus);
 	box-shadow: 0px 0px 0px 2px var(--focus-outline);
 	border-radius: 3px;
 }
 
-.menu__button {
+.header__button {
 	display: none;
 }
 
@@ -238,7 +262,8 @@ body {
 	background-color: var(--section-bg);
 }
 
-.skills__inner, .skills__item {
+.skills__inner,
+.skills__item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -329,8 +354,11 @@ body {
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 1.6;
-	margin: 0 17px;
 	transition: color 0.2s linear;
+}
+
+.projects__button:not(:last-child) {
+	margin-right: 17px;
 }
 
 .projects__button:hover {
@@ -519,8 +547,15 @@ body {
 }
 
 .contacts__connect a {
-	display: block;
+	display: inline-block;
 	margin-bottom: 15px;
+}
+
+.contacts__connect a:focus {
+	outline: 1px solid transparent;
+	background-color: var(--bg-focus);
+	box-shadow: 0 0 0 2px var(--link-in-focus);
+	border-radius: 3px;
 }
 
 .contacts__connect a:hover {
@@ -532,15 +567,7 @@ body {
 	text-decoration: underline;
 }
 
-.contacts__connect a:focus {
-	outline: 1px solid transparent;
-	background-color: var(--bg-focus);
-	box-shadow: 0 0 0 2px var(--link-in-focus);
-	border-radius: 3px;
-}
-
 .contacts__list {
-	padding-top: 5px;
 	display: flex;
 	align-items: center;
 }
@@ -557,17 +584,17 @@ body {
 	display: block;
 }
 
-.contacts__link:active {
-	background: var(--bg-focus);
-	box-shadow: 3px 3px 15px var(--shadow-hover);
-	border-radius: 13px;
-}
-
 .contacts__link:focus {
 	outline: 1px solid transparent;
 	background-color: var(--bg-focus);
 	box-shadow: 0 0 0 2px var(--link-in-focus);
 	border-radius: 3px;
+}
+
+.contacts__link:active {
+	background-color: var(--bg-focus);
+	box-shadow: 3px 3px 15px var(--shadow-hover);
+	border-radius: 13px;
 }
 
 .contacts__wrapper {
@@ -630,6 +657,7 @@ body {
 	.skills__list {
 		max-width: 530px;
 	}
+
 	.skills__bar {
 		max-width: 460px;
 	}
@@ -639,19 +667,25 @@ body {
 	.section {
 		text-align: center;
 	}
+
 	.skills__inner {
 		display: block;
 	}
-	.skills__list, .skills__bar {
+
+	.skills__list,
+	.skills__bar {
 		max-width: 100%;
 	}
+
 	.skills__stats {
 		min-width: 50px;
 		text-align: left;
 	}
+
 	.skills__item:not(:last-child) {
 		margin-bottom: 70px;
 	}
+
 	.skills__img {
 		margin: 0 auto 90px;
 	}
@@ -661,36 +695,46 @@ body {
 	.section {
 		padding: 100px 0;
 	}
+
 	.title {
 		font-size: 43px;
 	}
+
 	.logo {
 		z-index: 1;
 	}
+
 	.header__top {
 		padding: 15px 0;
 	}
+
 	.header__content {
 		height: calc(100vh - 82px);
 	}
-	.menu__button {
+
+	.header__button {
 		z-index: 1;
 	}
+
 	.menu__item:not(:last-child) {
 		margin-right: 0;
 	}
+
 	.menu__item {
 		text-align: center;
 		padding: 11px 0;
 		cursor: pointer;
 		transition: background-color 0.1s linear;
 	}
+
 	.menu__item:hover {
 		background-color: var(--menu-bg-active);
 	}
+
 	.menu__link:hover {
 		text-decoration: none;
 	}
+
 	.menu {
 		position: absolute;
 		top: -100%;
@@ -702,16 +746,20 @@ body {
 		padding-top: 95px;
 		transition: top 0.5s linear;
 	}
+
 	.menu.active {
 		top: 0;
 	}
-	.menu__button {
+
+	.header__button {
 		display: block;
 		width: 30px;
 		height: 22px;
 		position: relative;
 	}
-	.menu__button::after, .menu__button::before {
+
+	.header__button::after,
+	.header__button::before {
 		content: '';
 		background-color: var(--white);
 		position: absolute;
@@ -720,13 +768,16 @@ body {
 		left: 0;
 		transition: transform 0.3s linear;
 	}
-	.menu__button::before {
+
+	.header__button::before {
 		top: 0;
 	}
-	.menu__button::after {
+
+	.header__button::after {
 		bottom: 0;
 	}
-	.menu__button span {
+
+	.header__button span {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -736,24 +787,30 @@ body {
 		background-color: #fff;
 		transition: transform 0.3s linear;
 	}
-	.menu__button.active::before {
+
+	.header__button.active::before {
 		transform: rotate(-45deg);
 		top: 10px;
 	}
-	.menu__button.active::after {
+
+	.header__button.active::after {
 		transform: rotate(45deg);
 		bottom: 10px;
 	}
-	.menu__button.active span {
+
+	.header__button.active span {
 		transform: scale(0);
 	}
+
 	.about__content {
 		text-align: left;
 	}
+
 	.services__list {
 		grid-template-columns: 1fr;
 		row-gap: 50px;
 	}
+
 	.services__item {
 		margin: 0 auto;
 		text-align: left;
@@ -766,16 +823,26 @@ body {
 	.section {
 		padding: 70px 0;
 	}
+
 	.title {
 		font-size: 38px;
 		margin-bottom: 40px;
 	}
+
 	.header__title {
 		font-size: 28px;
 		max-width: 555px;
 	}
+
 	.header__title span {
 		font-size: 48px;
+	}
+	.menu__item {
+		padding: 15px 0;
+	}
+	.menu__link {
+		font-size: 20px;
+		display: block;
 	}
 }
 
@@ -784,60 +851,76 @@ body {
 		font-size: 28px;
 		margin-bottom: 30px;
 	}
+
 	.section {
 		padding: 50px 0;
 	}
+
 	.logo__img {
 		width: 110px;
 		height: 36px;
 	}
+
 	.header__title {
 		font-size: 25px;
 	}
+
 	.header__title span {
 		font-size: 40px;
 	}
+
 	.header__content {
 		height: calc(100vh - 66px);
 	}
+
 	.header__link {
 		font-size: 14px;
 		margin-bottom: 15px;
 	}
+
 	.about__content {
 		font-size: 16px;
 	}
+
 	.about__content p:not(:last-child) {
 		margin-bottom: 15px;
 	}
+
 	.skills__img {
 		width: 300px;
 		height: 325px;
 		object-fit: cover;
 		margin-bottom: 30px;
 	}
+
 	.skills__item {
 		display: block;
 	}
+
 	.skills__stats {
 		text-align: center;
 	}
+
 	.skills__item:not(:last-child) {
 		margin-bottom: 25px;
 	}
+
 	.skills__list {
 		max-width: 300px;
 		margin: 0 auto;
 	}
+
 	.services__heading {
 		font-size: 20px;
 	}
+
 	.services__item {
 		padding-top: 45px;
 		background-position: left top;
 		background-size: 40px 40px;
 		max-width: 350px;
 	}
+
 	.services__list {
 		row-gap: 30px;
 	}
