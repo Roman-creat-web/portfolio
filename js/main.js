@@ -2,6 +2,7 @@ $(function () {
 	$('.header__button').on('click', function () {
 		$('.menu, .header__button').toggleClass('active');
 	});
+	var mixer = mixitup('.projects__list');
 });
 
 
@@ -78,12 +79,4 @@ $(function () {
 
 
 
-
-
-
-// $(function () {
-// 	$('.menu__button').on('click', function () {
-// 		$('.menu').toggleClass('menu--active');
-// 	});
-// });
 

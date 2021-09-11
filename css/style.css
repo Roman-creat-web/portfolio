@@ -340,14 +340,11 @@ body {
 	text-align: center;
 }
 
-.projects__filter {
-	margin-bottom: 60px;
-}
-
 .projects__filters {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 60px;
 }
 
 .projects__button {
@@ -357,7 +354,7 @@ body {
 	transition: color 0.2s linear;
 }
 
-.projects__button:not(:last-child) {
+.projects__filter:not(:last-child) {
 	margin-right: 17px;
 }
 
@@ -382,7 +379,8 @@ body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 45px;
-	margin-bottom: 60px;
+	width: fit-content;
+	margin: 0 auto 60px;
 }
 
 /* Reviews */
@@ -661,6 +659,16 @@ body {
 	.skills__bar {
 		max-width: 460px;
 	}
+
+	.projects__list {
+		gap: 20px;
+		margin-bottom: 50px;
+	}
+
+	.projects__img {
+		width: 300px;
+		height: 300px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -693,6 +701,7 @@ body {
 	.skills__img {
 		margin: 0 auto 90px;
 	}
+
 	.services__item {
 		text-align: left;
 	}
@@ -837,6 +846,19 @@ body {
 		background-position: center top;
 		padding-top: 75px;
 	}
+
+	.projects {
+		padding-bottom: 100px;
+	}
+
+	.projects__list {
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 40px;
+	}
+
+	.projects__button {
+		font-size: 21px;
+	}
 }
 
 
@@ -867,6 +889,28 @@ body {
 
 	.header__title span {
 		font-size: 57px;
+	}
+
+	.projects {
+		padding-bottom: 70px;
+	}
+
+	.projects__img {
+		width: 200px;
+		height: 200px;
+	}
+
+	.projects__filters {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.projects__filter:not(:last-child) {
+		margin: 0 0 15px 0;
+	}
+
+	.projects__button {
+		font-size: 18px;
 	}
 }
 
@@ -955,6 +999,20 @@ body {
 
 	.services__list {
 		row-gap: 30px;
+	}
+
+	.projects {
+		padding-bottom: 50px;
+	}
+
+	.projects__list {
+		gap: 15px;
+		margin-bottom: 30px;
+	}
+
+	.projects__img {
+		width: 165px;
+		height: 165px;
 	}
 }
 
